@@ -1,0 +1,42 @@
+:root {
+  /* Nova Studio Palette */
+  --color-bg-primary: #050505; /* Black */
+  --color-bg-secondary: #111111; /* Dark Gray */
+  --color-text-primary: #FAFAFA; /* White */
+  --color-text-secondary: #A1A1AA; /* Warm Gray */
+  --color-accent: #2563EB; /* Electric Blue */
+  
+  /* Typography - Massive and clean */
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Geist', 'Inter', sans-serif;
+  
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+  --space-5: 8rem;
+  --space-6: 12rem;
+  --space-7: 16rem;
+  
+  /* Layout */
+  --max-width: 1800px; /* Extremely wide editorial */
+  --container-pad: 5vw;
+  
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  
+  /* Grid */
+  --grid-gap: 2rem;
+  
+  /* Motion - Extremely snappy but smooth */
+  --transition-fast: 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+  --transition-slow: 0.8s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}

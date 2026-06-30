@@ -1,0 +1,42 @@
+:root {
+  /* Atlas Horizon Palette */
+  --color-bg-primary: #F7F5EE; /* Ivory */
+  --color-bg-secondary: #EAE6DF; /* Stone / Sand */
+  --color-bg-dark: #1A2421; /* Deep Forest */
+  --color-text-primary: #1A2421; /* Deep Forest */
+  --color-text-secondary: #4A5652; /* Muted Forest */
+  --color-text-light: #F7F5EE; /* Ivory text for dark sections */
+  --color-accent: #C29B62; /* Gold Accent */
+  --color-ocean: #284455; /* Ocean Blue */
+  
+  /* Typography */
+  --font-serif: 'Instrument Serif', 'Canela', serif;
+  --font-sans: 'Inter', 'Geist', sans-serif;
+  
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+  --space-5: 8rem;
+  --space-6: 12rem;
+  
+  /* Layout */
+  --max-width: 1600px; /* Very wide for cinematic feel */
+  --container-pad: 4rem; /* Deep padding */
+  
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  
+  /* Motion - Slower, cinematic */
+  --transition-fast: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-pad: 1.5rem;
+  }
+}

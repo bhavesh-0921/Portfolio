@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhavesh Agrawal — Web Developer, Brand Strategist & Creative Director</title>
+  <meta name="description" content="Crafting digital experiences that people remember. Modern websites, thoughtful branding, and meaningful storytelling by Bhavesh Agrawal.">
+  <meta name="author" content="Bhavesh Agrawal">
+  <meta property="og:title" content="Bhavesh Agrawal — Digital Experiences That People Remember">
+  <meta property="og:description" content="Premium web design, brand identity, and creative direction. Digital experiences built with intention.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>B</text></svg>">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Accessibility: Skip Link -->
+  <a href="#work" class="skip-link">Skip to main content</a>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo">Bhavesh.</a>
+      <div class="navbar__links">
+        <a href="#work" class="navbar__link">Work</a>
+        <a href="#services" class="navbar__link">Services</a>
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#contact" class="navbar__link">Contact</a>
+      </div>
+      <div class="navbar__actions">
+        <a href="#" class="navbar__resume">Resume</a>
+        <a href="#contact" class="btn btn-primary navbar__cta">Hire Me</a>
+      </div>
+      <button class="navbar__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" role="dialog" aria-label="Mobile navigation">
+    <a href="#work" class="mobile-nav__link">Work</a>
+    <a href="#services" class="mobile-nav__link">Services</a>
+    <a href="#showcase" class="mobile-nav__link">Showcase</a>
+    <a href="#about" class="mobile-nav__link">About</a>
+    <a href="#contact" class="mobile-nav__link">Contact</a>
+    <a href="#contact" class="btn btn-primary" style="margin-top:1rem;">Hire Me</a>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__content">
+          <span class="hero__label reveal">Web Developer · Brand Strategist · Content Creator</span>
+          <h1 class="hero__title reveal">
+            Crafting digital<br>experiences that<br>people <em>remember.</em>
+          </h1>
+          <p class="hero__subtitle reveal">
+            Modern websites. Thoughtful branding.<br>Meaningful storytelling.
+          </p>
+          <p class="hero__description reveal">
+            I help brands stand out through intentional design, strategic thinking, and content that connects.
+          </p>
+          <div class="hero__ctas reveal">
+            <a href="#work" class="btn btn-primary">View Work <span class="arrow">↓</span></a>
+            <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+          </div>
+        </div>
+
+        <!-- Right: UI Composition — No decorative floats (Rule 4, 10) -->
+        <div class="hero__visual">
+          <div class="hero__composition">
+            <div class="hero__browser hero__browser--main">
+              <div class="browser__bar">
+                <span class="browser__dot"></span><span class="browser__dot"></span><span class="browser__dot"></span>
+                <span class="browser__url">design-system.fig</span>
+              </div>
+              <div class="browser__content">
+                <div class="browser__typography">
+                  <h3>Aa</h3>
+                  <p style="font-family:var(--font-serif);font-size:1.5rem;color:var(--color-text-primary);">Instrument Serif</p>
+                  <p style="font-size:0.8rem;color:var(--color-text-tertiary);margin-top:4px;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                  <p style="font-size:0.8rem;color:var(--color-text-tertiary);">abcdefghijklmnopqrstuvwxyz</p>
+                  <div class="browser__swatches" style="margin-top:12px;">
+                    <div class="browser__swatch" style="background:#09090B;"></div>
+                    <div class="browser__swatch" style="background:#FAFAFA;"></div>
+                    <div class="browser__swatch" style="background:#2563EB;"></div>
+                    <div class="browser__swatch" style="background:#A1A1AA;"></div>
+                    <div class="browser__swatch" style="background:#22C55E;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero__browser hero__browser--secondary">
+              <div class="browser__bar">
+                <span class="browser__dot"></span><span class="browser__dot"></span><span class="browser__dot"></span>
+                <span class="browser__url">app.jsx</span>
+              </div>
+              <div class="browser__content">
+                <div class="browser__code">
+                  <span class="comment">// Build something</span><br>
+                  <span class="keyword">const</span> <span class="function">brand</span> = {<br>
+                  &nbsp;&nbsp;vision: <span class="string">"premium"</span>,<br>
+                  &nbsp;&nbsp;craft: <span class="string">"intentional"</span>,<br>
+                  &nbsp;&nbsp;impact: <span class="number">100</span><br>
+                  };
+                </div>
+              </div>
+            </div>
+            <div class="hero__browser hero__browser--tertiary">
+              <div class="browser__bar">
+                <span class="browser__dot"></span><span class="browser__dot"></span><span class="browser__dot"></span>
+                <span class="browser__url">brand.svg</span>
+              </div>
+              <div class="browser__content" style="display:flex;align-items:center;justify-content:center;">
+                <span style="font-family:var(--font-serif);font-size:2.5rem;color:var(--color-text-primary);font-style:italic;">BA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOCIAL PROOF BAR ========== -->
+  <section class="proof" id="proof">
+    <div class="container">
+      <div class="proof__grid stagger-children">
+        <div class="proof__item">
+          <span class="proof__number" data-count="1.1" data-suffix="M+">0</span>
+          <span class="proof__label">Views in 30 Days</span>
+        </div>
+        <div class="proof__item">
+          <span class="proof__number" data-count="20" data-suffix="+">0</span>
+          <span class="proof__label">Projects Built</span>
+        </div>
+        <div class="proof__item">
+          <span class="proof__number" data-count="100" data-suffix="+">0</span>
+          <span class="proof__label">Design Assets</span>
+        </div>
+        <div class="proof__item">
+          <span class="proof__number" data-count="5" data-suffix="+">0</span>
+          <span class="proof__label">Creative Domains</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED WORK ========== -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="work__header">
+        <span class="section-label reveal">Featured Work</span>
+        <h2 class="section-heading reveal">Selected <em>projects</em></h2>
+      </div>
+
+      <div class="work__list">
+
+        <!-- Project 1: Atelier Aurea — Luxury Interior Studio -->
+        <div class="project reveal">
+          <div class="project__image" data-project="luxury">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg, #f5f0e8 0%, #e8e0d0 40%, #d4c8b0 100%);display:flex;align-items:center;justify-content:center;">
+              <div style="text-align:center;">
+                <span style="font-family:var(--font-serif);font-size:3rem;color:#2a2520;font-style:italic;letter-spacing:-0.02em;">Atelier Aurea</span>
+                <p style="font-size:0.7rem;color:#8a7e6d;letter-spacing:0.25em;text-transform:uppercase;margin-top:10px;">Luxury Interior Design</p>
+              </div>
+            </div>
+            <div class="project__image-overlay">
+              <span class="btn-text" style="color:#fff;font-size:0.8rem;">View Case Study <span class="arrow">→</span></span>
+            </div>
+          </div>
+          <div class="project__info">
+            <span class="project__category">Premium Brand Website</span>
+            <h3 class="project__name">Atelier Aurea</h3>
+            <p class="project__description">A premium website for a luxury interior design studio. Editorial design, architectural photography, restrained typography, and generous whitespace — built to establish trust with high-net-worth clients.</p>
+            <div class="project__meta">
+              <div class="project__meta-item">
+                <span class="project__meta-key">Role</span>
+                <span class="project__meta-value">Design & Development</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Emotion</span>
+                <span class="project__meta-value">Calm · Timeless</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Type</span>
+                <span class="project__meta-value">Concept Project</span>
+              </div>
+            </div>
+            <div class="project__cta">
+              <a href="projects/atelier-aurea/index.html" class="btn-text" target="_blank">View Live Site <span class="arrow">→</span></a>
+              <button class="btn-text" data-project="luxury" style="margin-left:var(--space-6);">Read Case Study <span class="arrow">→</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: PulseFlow -->
+        <div class="project reveal">
+          <div class="project__image" data-project="fitness">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg, #09090b 0%, #121214 50%, #18181b 100%);display:flex;align-items:center;justify-content:center;">
+              <div style="text-align:center;">
+                <span style="font-family:var(--font-sans);font-size:2rem;font-weight:700;color:#2563eb;letter-spacing:-0.03em;">PulseFlow</span>
+                <p style="font-size:0.7rem;color:#a1a1aa;letter-spacing:0.1em;margin-top:8px;">Workflow & Operations Workspace</p>
+              </div>
+            </div>
+            <div class="project__image-overlay">
+              <span class="btn-text" style="color:#fff;font-size:0.8rem;">View Case Study <span class="arrow">→</span></span>
+            </div>
+          </div>
+          <div class="project__info">
+            <span class="project__category">B2B Workflow & Operations Platform</span>
+            <h3 class="project__name">PulseFlow</h3>
+            <p class="project__description">A B2B SaaS platform that unifies operations, tasks, approvals, and performance reporting in a single high-velocity interface. Focused on scalable design systems and information control.</p>
+            <div class="project__meta">
+              <div class="project__meta-item">
+                <span class="project__meta-key">Role</span>
+                <span class="project__meta-value">Product Design & Dev</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Emotion</span>
+                <span class="project__meta-value">Control · Efficiency</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Type</span>
+                <span class="project__meta-value">Concept Project</span>
+              </div>
+            </div>
+            <div class="project__cta">
+              <a href="projects/pulseflow/index.html" class="btn-text" target="_blank">View Live Site <span class="arrow">→</span></a>
+              <button class="btn-text" data-project="fitness" style="margin-left:var(--space-6);">Read Case Study <span class="arrow">→</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Coffee Brand -->
+        <div class="project reveal">
+          <div class="project__image" data-project="coffee">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg, #1c1410 0%, #2c1e14 50%, #3d2b1f 100%);display:flex;align-items:center;justify-content:center;">
+              <div style="text-align:center;">
+                <span style="font-family:var(--font-serif);font-size:2.5rem;color:#d4a574;font-style:italic;">Roast & Co.</span>
+                <p style="font-size:0.7rem;color:#8b7355;letter-spacing:0.15em;text-transform:uppercase;margin-top:8px;">Artisan Coffee Roasters</p>
+              </div>
+            </div>
+            <div class="project__image-overlay">
+              <span class="btn-text" style="color:#fff;font-size:0.8rem;">View Case Study <span class="arrow">→</span></span>
+            </div>
+          </div>
+          <div class="project__info">
+            <span class="project__category">Brand Identity · Marketing</span>
+            <h3 class="project__name">Artisan Coffee Brand</h3>
+            <p class="project__description">Complete brand identity and landing page for a specialty coffee roaster. Logo, packaging, color system, and web — storytelling through every touchpoint.</p>
+            <div class="project__meta">
+              <div class="project__meta-item">
+                <span class="project__meta-key">Role</span>
+                <span class="project__meta-value">Brand & Web Design</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Emotion</span>
+                <span class="project__meta-value">Warmth · Comfort</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Type</span>
+                <span class="project__meta-value">Brand Project</span>
+              </div>
+            </div>
+            <div class="project__cta">
+              <a href="projects/the-roast-theory/index.html" class="btn-text" target="_blank">View Live Site <span class="arrow">→</span></a>
+              <button class="btn-text" data-project="coffee" style="margin-left:var(--space-6);">Read Case Study <span class="arrow">→</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Travel Website -->
+        <div class="project reveal">
+          <div class="project__image" data-project="travel">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg, #0c1821 0%, #162a3a 50%, #1b4d5c 100%);display:flex;align-items:center;justify-content:center;">
+              <div style="text-align:center;">
+                <span style="font-family:var(--font-sans);font-size:1.8rem;font-weight:600;color:#5bb8d4;letter-spacing:0.05em;">WANDER</span>
+                <p style="font-size:0.7rem;color:#6b8f9e;letter-spacing:0.2em;text-transform:uppercase;margin-top:8px;">Explore. Book. Experience.</p>
+              </div>
+            </div>
+            <div class="project__image-overlay">
+              <span class="btn-text" style="color:#fff;font-size:0.8rem;">View Case Study <span class="arrow">→</span></span>
+            </div>
+          </div>
+          <div class="project__info">
+            <span class="project__category">UX Design · Web</span>
+            <h3 class="project__name">Travel Booking Platform</h3>
+            <p class="project__description">A visually immersive travel website. Intuitive booking flows, visual hierarchy, and responsive design that makes exploration feel effortless.</p>
+            <div class="project__meta">
+              <div class="project__meta-item">
+                <span class="project__meta-key">Role</span>
+                <span class="project__meta-value">UI/UX & Frontend</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Emotion</span>
+                <span class="project__meta-value">Wonder · Adventure</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Type</span>
+                <span class="project__meta-value">Concept Project</span>
+              </div>
+            </div>
+            <div class="project__cta">
+              <a href="projects/atlas-horizon/index.html" class="btn-text" target="_blank">View Live Site <span class="arrow">→</span></a>
+              <button class="btn-text" data-project="travel" style="margin-left:var(--space-6);">Read Case Study <span class="arrow">→</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Nova Studio -->
+        <div class="project reveal">
+          <div class="project__image" data-project="personal">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg, #050505 0%, #111111 50%, #1a1a1a 100%);display:flex;align-items:center;justify-content:center;">
+              <div style="text-align:center;">
+                <span style="font-family:var(--font-sans);font-size:2rem;color:#fafafa;font-weight:700;letter-spacing:-0.05em;">NOVA.</span>
+                <p style="font-size:0.7rem;color:#2563eb;letter-spacing:0.15em;text-transform:uppercase;margin-top:8px;">Creative Agency</p>
+              </div>
+            </div>
+            <div class="project__image-overlay">
+              <span class="btn-text" style="color:#fff;font-size:0.8rem;">View Case Study <span class="arrow">→</span></span>
+            </div>
+          </div>
+          <div class="project__info">
+            <span class="project__category">Premium Agency Website</span>
+            <h3 class="project__name">Nova Studio</h3>
+            <p class="project__description">A fictional premium creative agency created to demonstrate advanced frontend engineering, motion design, branding, and agency-level UX. An editorial-first experience.</p>
+            <div class="project__meta">
+              <div class="project__meta-item">
+                <span class="project__meta-key">Role</span>
+                <span class="project__meta-value">Engineering & Branding</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Emotion</span>
+                <span class="project__meta-value">Confident · Precise</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Type</span>
+                <span class="project__meta-value">Concept Project</span>
+              </div>
+            </div>
+            <div class="project__cta">
+              <a href="projects/nova-studio/index.html" class="btn-text" target="_blank">View Live Site <span class="arrow">→</span></a>
+              <button class="btn-text" data-project="personal" style="margin-left:var(--space-6);">Read Case Study <span class="arrow">→</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Project Echo (REAL) — Colors: warm gold, NOT purple (Rule 4) -->
+        <div class="project reveal">
+          <div class="project__image" data-project="poetry">
+            <div style="width:100%;height:100%;background:linear-gradient(160deg, #0c0b09 0%, #141210 40%, #1a1714 100%);display:flex;align-items:center;justify-content:center;">
+              <div style="text-align:center;">
+                <span style="font-family:var(--font-serif);font-size:2.2rem;color:#c8b89a;font-style:italic;">शब्द (Echo)</span>
+                <p style="font-family:var(--font-serif);font-size:1.1rem;color:#7a6f5d;font-style:italic;margin-top:4px;">1.1M Organic Views</p>
+                <p style="font-size:0.65rem;color:#555;letter-spacing:0.2em;text-transform:uppercase;margin-top:12px;">30 Days · Zero Ad Spend</p>
+              </div>
+            </div>
+            <div class="project__image-overlay">
+              <span class="btn-text" style="color:#fff;font-size:0.8rem;">View Case Study <span class="arrow">→</span></span>
+            </div>
+          </div>
+          <div class="project__info">
+            <span class="project__category">Digital Growth Case Study</span>
+            <h3 class="project__name">Project Echo</h3>
+            <p class="project__description">Growing an emotional creative writing brand to over 1.1 million views in 30 days without advertising. Documents copywriting psychology, retention workflows, and growth systems.</p>
+            <div class="project__meta">
+              <div class="project__meta-item">
+                <span class="project__meta-key">Role</span>
+                <span class="project__meta-value">Growth & Strategy Lead</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Performance</span>
+                <span class="project__meta-value">1.1M+ Views / 30 Days</span>
+              </div>
+              <div class="project__meta-item">
+                <span class="project__meta-key">Type</span>
+                <span class="project__meta-value">Verified Case Study</span>
+              </div>
+            </div>
+            <div class="project__cta">
+              <a href="projects/project-echo/index.html" class="btn-text" target="_blank">View Live Case Study <span class="arrow">→</span></a>
+              <button class="btn-text" data-project="poetry" style="margin-left:var(--space-6);">Read Case Study <span class="arrow">→</span></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services__header">
+        <span class="section-label reveal">What I Do</span>
+        <h2 class="section-heading reveal">Services</h2>
+      </div>
+      <div class="services__grid stagger-children">
+        <div class="service">
+          <div class="service__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3 class="service__title">Website Design</h3>
+          <p class="service__description">Custom websites built to convert. Every layout, interaction, and word — intentional.</p>
+        </div>
+        <div class="service">
+          <div class="service__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 class="service__title">Landing Pages</h3>
+          <p class="service__description">High-impact pages that capture attention in three seconds. Copy, design, flow — optimized for action.</p>
+        </div>
+        <div class="service">
+          <div class="service__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </div>
+          <h3 class="service__title">Brand Identity</h3>
+          <p class="service__description">Logos, color systems, typography, and brand guidelines that tell your story before you say a word.</p>
+        </div>
+        <div class="service">
+          <div class="service__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="service__title">Creative Strategy</h3>
+          <p class="service__description">Before pixels, there's strategy. Market research, audience analysis, and positioning that works.</p>
+        </div>
+        <div class="service">
+          <div class="service__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3 class="service__title">Content Creation</h3>
+          <p class="service__description">From Instagram carousels to brand stories — content that builds connection. 1.4M+ views prove the system works.</p>
+        </div>
+        <div class="service">
+          <div class="service__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </div>
+          <h3 class="service__title">Copywriting</h3>
+          <p class="service__description">Words that sell, persuade, and resonate. Headlines, product copy, brand voice — crafted to convert.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CREATIVE SHOWCASE ========== -->
+  <section class="showcase" id="showcase">
+    <div class="container">
+      <div class="showcase__header">
+        <span class="section-label reveal">Creative Work</span>
+        <h2 class="section-heading reveal">Beyond <em>websites</em></h2>
+        <p class="section-subheading reveal">Design, branding, and creative work across mediums.</p>
+      </div>
+      <div class="showcase__filters reveal" role="tablist" aria-label="Filter creative work">
+        <button class="showcase__filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="showcase__filter" data-filter="logos" role="tab" aria-selected="false">Logos</button>
+        <button class="showcase__filter" data-filter="posters" role="tab" aria-selected="false">Posters</button>
+        <button class="showcase__filter" data-filter="social" role="tab" aria-selected="false">Social Media</button>
+        <button class="showcase__filter" data-filter="typography" role="tab" aria-selected="false">Typography</button>
+        <button class="showcase__filter" data-filter="brand" role="tab" aria-selected="false">Brand Boards</button>
+      </div>
+      <div class="showcase__grid stagger-children">
+        <div class="showcase__item" data-category="logos" style="background:linear-gradient(160deg,#f5f0e8,#e8e0d0);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-serif);font-size:2rem;color:#2a2520;font-style:italic;">A</span>
+          <div class="showcase__item-overlay"><span class="showcase__item-title">Atelier Aurea</span><span class="showcase__item-category">Logo Design</span></div>
+        </div>
+        <div class="showcase__item showcase__item--wide" data-category="posters" style="background:linear-gradient(160deg,#0f0f0f,#1a1a1a);display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;">
+            <span style="font-family:var(--font-serif);font-size:1.5rem;color:#fafafa;font-style:italic;">MINIMALISM</span>
+            <p style="font-size:0.6rem;color:#555;letter-spacing:0.3em;margin-top:8px;">LESS IS MORE</p>
+          </div>
+          <div class="showcase__item-overlay"><span class="showcase__item-title">Typography Poster</span><span class="showcase__item-category">Poster Design</span></div>
+        </div>
+        <div class="showcase__item" data-category="social" style="background:linear-gradient(160deg,#0c0b09,#1a1714);display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;">
+            <span style="font-family:var(--font-serif);font-size:0.9rem;color:#c8b89a;font-style:italic;">Words<br>that stay</span>
+          </div>
+          <div class="showcase__item-overlay"><span class="showcase__item-title">Poetry Post</span><span class="showcase__item-category">Social Media</span></div>
+        </div>
+        <div class="showcase__item" data-category="typography" style="background:linear-gradient(160deg,#111,#1a1a1a);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-serif);font-size:3rem;color:#333;">Aa</span>
+          <div class="showcase__item-overlay"><span class="showcase__item-title">Type Exploration</span><span class="showcase__item-category">Typography</span></div>
+        </div>
+        <div class="showcase__item" data-category="brand" style="background:linear-gradient(160deg,#1c1410,#2c1e14);display:flex;align-items:center;justify-content:center;">
+          <div style="display:flex;gap:6px;">
+            <div style="width:20px;height:20px;background:#d4a574;border-radius:3px;"></div>
+            <div style="width:20px;height:20px;background:#8b7355;border-radius:3px;"></div>
+            <div style="width:20px;height:20px;background:#3d2b1f;border-radius:3px;"></div>
+          </div>
+          <div class="showcase__item-overlay"><span class="showcase__item-title">Roast & Co. Palette</span><span class="showcase__item-category">Brand Board</span></div>
+        </div>
+        <div class="showcase__item" data-category="logos" style="background:linear-gradient(160deg,#0d1117,#161b22);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-sans);font-size:1.2rem;font-weight:600;color:#58a6ff;">FP</span>
+          <div class="showcase__item-overlay"><span class="showcase__item-title">FitPulse Mark</span><span class="showcase__item-category">Logo Design</span></div>
+        </div>
+        <div class="showcase__item" data-category="posters" style="background:linear-gradient(160deg,#0a0a0a,#151515);display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;">
+            <p style="font-size:0.55rem;color:#444;letter-spacing:0.3em;text-transform:uppercase;">Design is</p>
+            <span style="font-family:var(--font-serif);font-size:1.6rem;color:#fafafa;font-style:italic;">Thinking</span>
+            <p style="font-size:0.55rem;color:#444;letter-spacing:0.3em;text-transform:uppercase;margin-top:4px;">Made Visual</p>
+          </div>
+          <div class="showcase__item-overlay"><span class="showcase__item-title">Design Quote</span><span class="showcase__item-category">Poster Design</span></div>
+        </div>
+        <div class="showcase__item" data-category="social" style="background:linear-gradient(160deg,#0c1821,#1b4d5c);display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-sans);font-size:0.7rem;font-weight:500;color:#5bb8d4;letter-spacing:0.1em;">WANDER</span>
+          <div class="showcase__item-overlay"><span class="showcase__item-title">Travel Campaign</span><span class="showcase__item-category">Social Media</span></div>
+        </div>
+        <div class="showcase__item" data-category="brand" style="background:linear-gradient(160deg,#111,#1a1a1a);display:flex;align-items:center;justify-content:center;">
+          <div style="text-align:center;">
+            <div style="width:40px;height:2px;background:#fafafa;margin:0 auto 8px;"></div>
+            <span style="font-size:0.6rem;color:#666;letter-spacing:0.2em;">GRID SYSTEM</span>
+            <div style="width:40px;height:2px;background:#fafafa;margin:8px auto 0;"></div>
+          </div>
+          <div class="showcase__item-overlay"><span class="showcase__item-title">Layout System</span><span class="showcase__item-category">Brand Board</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WRITING ========== -->
+  <section class="writing" id="writing">
+    <div class="container">
+      <div class="writing__header">
+        <span class="section-label reveal">Writing</span>
+        <h2 class="section-heading reveal">Words that <em>work</em></h2>
+        <p class="section-subheading reveal">Copy, content, and creative writing — crafted to connect and convert.</p>
+      </div>
+      <div class="writing__grid stagger-children">
+        <div class="writing__piece writing__piece--featured">
+          <span class="writing__piece-type">Brand Story</span>
+          <h3 class="writing__piece-title">Every brand has a story. Most just haven't found the right words yet.</h3>
+          <p class="writing__piece-excerpt">"We don't sell coffee. We sell the moment between chaos and clarity — the first sip that turns a morning into a beginning."</p>
+        </div>
+        <div class="writing__piece">
+          <span class="writing__piece-type">Landing Page</span>
+          <h3 class="writing__piece-title">Above the fold, below the surface.</h3>
+          <p class="writing__piece-excerpt">Headlines that stop the scroll. Subtext that builds trust. CTAs that feel like invitations, not commands.</p>
+        </div>
+        <div class="writing__piece">
+          <span class="writing__piece-type">Poetry</span>
+          <h3 class="writing__piece-title">Some words aren't meant to sell. They're meant to stay.</h3>
+          <p class="writing__piece-excerpt">"I wrote you into metaphors you'll never read, and called it closure."</p>
+        </div>
+        <div class="writing__piece">
+          <span class="writing__piece-type">Product Copy</span>
+          <h3 class="writing__piece-title">Features tell. Benefits sell. Stories convert.</h3>
+          <p class="writing__piece-excerpt">Micro-copy, product descriptions, and feature narratives that make users feel understood.</p>
+        </div>
+        <div class="writing__piece">
+          <span class="writing__piece-type">Instagram Carousel</span>
+          <h3 class="writing__piece-title">10 slides. One idea. Maximum impact.</h3>
+          <p class="writing__piece-excerpt">Carousel frameworks designed for saves, shares, and follows — not just likes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="process__header" style="text-align:center;">
+        <span class="section-label reveal" style="justify-content:center;">How I Work</span>
+        <h2 class="section-heading reveal">The <em>process</em></h2>
+      </div>
+      <div class="process__timeline">
+        <div class="process__step reveal"><div class="process__step-number">01</div><div class="process__step-content"><h3 class="process__step-title">Discovery</h3><p class="process__step-desc">Understanding your brand, goals, audience, and what success looks like. No assumptions — deep listening and sharp questions.</p></div></div>
+        <div class="process__step reveal"><div class="process__step-number">02</div><div class="process__step-content"><h3 class="process__step-title">Research</h3><p class="process__step-desc">Competitor analysis, market trends, user behavior, and design references. Strategy before aesthetics.</p></div></div>
+        <div class="process__step reveal"><div class="process__step-number">03</div><div class="process__step-content"><h3 class="process__step-title">Strategy</h3><p class="process__step-desc">Information architecture, content hierarchy, and a clear plan for every page, section, and word.</p></div></div>
+        <div class="process__step reveal"><div class="process__step-number">04</div><div class="process__step-content"><h3 class="process__step-title">Design</h3><p class="process__step-desc">Wireframes to high-fidelity. Typography, color, spacing, and motion — every pixel deliberate.</p></div></div>
+        <div class="process__step reveal"><div class="process__step-number">05</div><div class="process__step-content"><h3 class="process__step-title">Development</h3><p class="process__step-desc">Clean code, smooth performance, responsive across devices. Built to last, not just to launch.</p></div></div>
+        <div class="process__step reveal"><div class="process__step-number">06</div><div class="process__step-content"><h3 class="process__step-title">Launch</h3><p class="process__step-desc">Final testing, optimization, and deployment. Then ongoing support, analytics, and iteration.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__left reveal">
+          <span class="section-label">About</span>
+          <h2 class="about__title">Not just a developer.<br>A <em>thinker.</em></h2>
+        </div>
+        <div class="about__right">
+          <div class="about__block reveal"><span class="about__block-label">What I Believe</span><p class="about__block-text">Design isn't decoration. It's problem-solving with intention. Every pixel earns its place. Every word carries weight. Every interaction feels inevitable.</p></div>
+          <div class="about__block reveal"><span class="about__block-label">My Approach</span><p class="about__block-text">I sit at the intersection of design, development, branding, and content. Strategy first. Aesthetics second. Results always.</p></div>
+          <div class="about__block reveal"><span class="about__block-label">How I Solve Problems</span><p class="about__block-text">By asking better questions. By understanding the business behind the brief. By researching before designing, and testing before launching.</p></div>
+          <div class="about__block reveal"><span class="about__block-label">What I Enjoy Creating</span><p class="about__block-text">Brands that feel alive. Websites that feel intentional. Content that people screenshot and save. Experiences that make someone think — "this is different."</p></div>
+          <div class="about__block reveal"><span class="about__block-label">Current Focus</span><p class="about__block-text">Deepening my craft in creative strategy, scaling content systems, and exploring how AI tools can amplify human creativity.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS — Rule 25: Solutions, not technology ========== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="skills__header">
+        <span class="section-label reveal">Capabilities</span>
+        <h2 class="section-heading reveal">What I <em>deliver</em></h2>
+      </div>
+      <div class="skills__groups stagger-children">
+        <div class="skills__group">
+          <h3 class="skills__group-title">What I Build</h3>
+          <div class="skills__list">
+            <span class="skills__item">Premium Websites</span>
+            <span class="skills__item">SaaS Interfaces</span>
+            <span class="skills__item">Landing Pages</span>
+            <span class="skills__item">Design Systems</span>
+            <span class="skills__item">Editorial Layouts</span>
+            <span class="skills__item">Responsive Experiences</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__group-title">How I Think</h3>
+          <div class="skills__list">
+            <span class="skills__item">User Research</span>
+            <span class="skills__item">Information Architecture</span>
+            <span class="skills__item">Conversion Strategy</span>
+            <span class="skills__item">Brand Positioning</span>
+            <span class="skills__item">Audience Analysis</span>
+            <span class="skills__item">Content Strategy</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__group-title">Craft</h3>
+          <div class="skills__list">
+            <span class="skills__item">Visual Design</span>
+            <span class="skills__item">Typography</span>
+            <span class="skills__item">Brand Identity</span>
+            <span class="skills__item">Copywriting</span>
+            <span class="skills__item">Motion Design</span>
+            <span class="skills__item">Photography Direction</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__group-title">Toolkit</h3>
+          <div class="skills__list">
+            <span class="skills__item">Figma</span>
+            <span class="skills__item">Adobe Suite</span>
+            <span class="skills__item">VS Code</span>
+            <span class="skills__item">Notion</span>
+            <span class="skills__item">Vercel</span>
+            <span class="skills__item">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials__inner reveal">
+        <span class="section-label" style="justify-content:center;">Testimonials</span>
+        <h2 class="section-heading">What people <em>say</em></h2>
+        <div class="testimonials__placeholder">
+          <span class="testimonials__quote-mark">"</span>
+          <p class="testimonials__coming">Coming Soon.</p>
+          <p style="font-size:var(--text-sm);color:var(--color-text-tertiary);max-width:360px;">Real testimonials from real clients. Better than making up fake ones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner reveal">
+        <span class="section-label" style="justify-content:center;">Get In Touch</span>
+        <h2 class="contact__title">Have an idea?</h2>
+        <p class="contact__subtitle">Let's build something worth remembering.</p>
+        <form class="contact__form" id="contact-form">
+          <div class="contact__row">
+            <div class="contact__field">
+              <label class="contact__label" for="contact-name">Name</label>
+              <input class="contact__input" type="text" id="contact-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="contact__field">
+              <label class="contact__label" for="contact-email">Email</label>
+              <input class="contact__input" type="email" id="contact-email" name="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="contact__field">
+            <label class="contact__label" for="contact-subject">Subject</label>
+            <input class="contact__input" type="text" id="contact-subject" name="subject" placeholder="What's this about?">
+          </div>
+          <div class="contact__field">
+            <label class="contact__label" for="contact-message">Message</label>
+            <textarea class="contact__textarea" id="contact-message" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary contact__submit">Send Message</button>
+        </form>
+        <p class="contact__email">Or reach me directly at <a href="mailto:agrawalbhavesh0903@gmail.com">agrawalbhavesh0903@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">Bhavesh.</span>
+        <div class="footer__links">
+          <a href="#work" class="footer__link">Work</a>
+          <a href="#services" class="footer__link">Services</a>
+          <a href="#about" class="footer__link">About</a>
+          <a href="#contact" class="footer__link">Contact</a>
+        </div>
+        <span class="footer__copy">© 2026 Bhavesh Agrawal. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== PROJECT MODALS — Full Case Study Structure (Rule 22) ========== -->
+  <div class="modal-overlay" id="project-modal">
+
+    <!-- MODAL: Atelier Aurea (Luxury Interior) -->
+    <div class="modal modal-content" id="modal-luxury" style="display:none;">
+      <button class="modal__close" aria-label="Close modal">✕</button>
+      <div class="modal__hero-image">
+        <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(160deg,#f5f0e8 0%,#e8e0d0 40%,#d4c8b0 100%);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+          <div style="text-align:center;"><span style="font-family:var(--font-serif);font-size:4rem;color:#2a2520;font-style:italic;letter-spacing:-0.02em;">Atelier Aurea</span><p style="font-size:0.85rem;color:#8a7e6d;letter-spacing:0.25em;text-transform:uppercase;margin-top:12px;">Luxury Interior Design</p></div>
+        </div>
+      </div>
+      <span class="modal__category">Premium Brand Website · Concept Project</span>
+      <h2 class="modal__title">Atelier Aurea</h2>
+      <div class="modal__meta">
+        <div class="modal__meta-item"><span class="modal__meta-key">Role</span><span class="modal__meta-value">Design & Development</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Emotion</span><span class="modal__meta-value">Calm · Timeless</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Palette</span><span class="modal__meta-value">Ivory · Charcoal · Bronze</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Type</span><span class="modal__meta-value">Concept Project</span></div>
+      </div>
+      <div class="modal__section"><h3 class="modal__section-title">Overview</h3><p class="modal__section-text">Atelier Aurea is a fictional luxury interior design studio specializing in bespoke interiors for high-end residences, boutique hotels, and private penthouses. Average project budgets: $80K–$2M. The website needed to establish trust with affluent decision-makers — not sell, but signal quality.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Challenge</h3><p class="modal__section-text">Luxury brands online fall into two traps: excessive flash or bland templates. Neither builds trust with high-net-worth individuals. The goal was quiet confidence — premium without pretension. A website that feels like walking into a beautifully designed Scandinavian home.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Audience</h3><p class="modal__section-text">Primary: High-net-worth individuals aged 35–65 — architects, entrepreneurs, CEOs, investors, hotel owners. They're not browsing. They're evaluating. They already have money. They need confidence. Secondary: Luxury developers, hospitality brands, real estate firms.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Research</h3><p class="modal__section-text">Studied premium architecture studios: Norm Architects, Olson Kundig, Studio McGee. Analyzed editorial design from Aesop and Apple. The pattern: typography carries the design. Photography proves the work. Whitespace signals premium. Copy stays short and confident.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Strategy</h3><p class="modal__section-text">Editorial, photography-led experience with restrained typography and generous whitespace. Single-page flow optimized for consultation bookings, not e-commerce. Every section answers one question: "Can I trust these people with my space?"</p></div>
+      <div class="modal__section">
+        <h3 class="modal__section-title">Design System</h3>
+        <p class="modal__section-text">Warm whites, charcoal, and muted bronze. Typography: Instrument Serif for headings (timeless), Inter for body (clarity). Every color, spacing, and component decision traced back to one word: calm.</p>
+        <div class="modal__colors">
+          <div class="modal__color-swatch" style="background:#f5f0e8;border:1px solid #d4c8b0;"></div>
+          <div class="modal__color-swatch" style="background:#2a2520;"></div>
+          <div class="modal__color-swatch" style="background:#b8956a;"></div>
+          <div class="modal__color-swatch" style="background:#8a7e6d;"></div>
+          <div class="modal__color-swatch" style="background:#e8e0d0;"></div>
+        </div>
+      </div>
+      <div class="modal__section"><h3 class="modal__section-title">Responsive Design</h3><p class="modal__section-text">Mobile feels editorial, not squeezed desktop. Typography scales fluidly. Navigation becomes an elegant drawer. Photography stacks vertically. Spacing is preserved — whitespace isn't sacrificed for mobile.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Outcome</h3><p class="modal__section-text">Designed to increase perceived brand value and encourage consultation inquiries through a more focused user journey. Because this is a concept project, no conversion metrics are claimed.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Reflection</h3><div class="modal__reflection"><p>Luxury is restraint. The hardest part wasn't adding — it was removing. Every element that survived earned its place through purpose. Nothing decorative without reason.</p></div></div>
+    </div>
+
+    <!-- MODAL: PulseFlow B2B Platform -->
+    <div class="modal modal-content" id="modal-fitness" style="display:none;">
+      <button class="modal__close" aria-label="Close modal">✕</button>
+      <div class="modal__hero-image">
+        <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(160deg,#09090b,#121214,#18181b);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+          <div style="text-align:center;"><span style="font-family:var(--font-sans);font-size:3rem;font-weight:700;color:#2563eb;letter-spacing:-0.03em;">PulseFlow</span><p style="font-size:0.85rem;color:#a1a1aa;margin-top:12px;">B2B Operations Workspace</p></div>
+        </div>
+      </div>
+      <span class="modal__category">Product Design · SaaS Operations Platform</span>
+      <h2 class="modal__title">PulseFlow Operations Platform</h2>
+      <div class="modal__meta">
+        <div class="modal__meta-item"><span class="modal__meta-key">Role</span><span class="modal__meta-value">Lead Product Designer & Dev</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Emotion</span><span class="modal__meta-value">Control · Efficiency</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Palette</span><span class="modal__meta-value">Near Black · White · Electric Blue</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Type</span><span class="modal__meta-value">Concept Project</span></div>
+      </div>
+      <div class="modal__section"><h3 class="modal__section-title">Overview</h3><p class="modal__section-text">PulseFlow unifies company operations, project backlogs, approvals, and performance reporting into a single intelligent workspace. Designed to eliminate spreadsheets and tool switching.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Challenge</h3><p class="modal__section-text">Growing businesses lose velocity by spreading workflows across dozens of separate tabs. The design challenge was creating a complex operational dashboard that feels fast, reduces user anxiety, and is highly accessible.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Audience</h3><p class="modal__section-text">Operations managers, COOs, founders, and project leads at mid-sized businesses (50-500 employees). They evaluate systems based on efficiency, control, and reliability.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Research</h3><p class="modal__section-text">Analyzed B2B tools like Linear, Stripe Dashboard, and Raycast. Identified the value of keyboard-first navigation, layout grids, progressive disclosure of settings, and high contrast styling.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Strategy</h3><p class="modal__section-text">Create a unified dark-mode B2B workspace simulator. Support a multi-view router (analytics, settings, board, flow builder) with minimal click counts. Every UI card must prove functional utility.</p></div>
+      <div class="modal__section">
+        <h3 class="modal__section-title">Design System</h3>
+        <p class="modal__section-text">Solid backgrounds, clean 1px borders, electric blue accents. Geist and Inter fonts. Radius set at 16px. Forms feature clear error fields, loading skeletons, and empty state guides.</p>
+        <div class="modal__colors">
+          <div class="modal__color-swatch" style="background:#09090b;border:1px solid #27272a;"></div>
+          <div class="modal__color-swatch" style="background:#2563eb;"></div>
+          <div class="modal__color-swatch" style="background:#18181b;"></div>
+          <div class="modal__color-swatch" style="background:#22c55e;"></div>
+          <div class="modal__color-swatch" style="background:#fafafa;"></div>
+        </div>
+      </div>
+      <div class="modal__section"><h3 class="modal__section-title">Outcome</h3><p class="modal__section-text">Designed as a production-quality dashboard layout ecosystem demonstrating reusable widgets, interactive pipeline builder, and responsive canvas sizing.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Reflection</h3><div class="modal__reflection"><p>Enterprise product design is not about decoration. Every component must earn its place. A clean design doesn't hide complexity; it clarifies it.</p></div></div>
+    </div>
+
+    <!-- MODAL: Coffee Brand -->
+    <div class="modal modal-content" id="modal-coffee" style="display:none;">
+      <button class="modal__close" aria-label="Close modal">✕</button>
+      <div class="modal__hero-image">
+        <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(160deg,#1c1410,#2c1e14,#3d2b1f);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+          <div style="text-align:center;"><span style="font-family:var(--font-serif);font-size:3.5rem;color:#d4a574;font-style:italic;">The Roast Theory</span><p style="font-size:0.85rem;color:#8b7355;letter-spacing:0.15em;text-transform:uppercase;margin-top:12px;">Luxury Coffee Roasters & Café Experience</p></div>
+        </div>
+      </div>
+      <span class="modal__category">E-commerce · Brand Identity · Web</span>
+      <h2 class="modal__title">The Roast Theory</h2>
+      <div class="modal__meta">
+        <div class="modal__meta-item"><span class="modal__meta-key">Role</span><span class="modal__meta-value">Brand & Web Design</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Emotion</span><span class="modal__meta-value">Warmth · Comfort</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Palette</span><span class="modal__meta-value">Espresso · Sand · Olive</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Type</span><span class="modal__meta-value">Concept Project</span></div>
+      </div>
+      <div class="modal__section"><h3 class="modal__section-title">Overview</h3><p class="modal__section-text">The Roast Theory is a fictional specialty coffee brand created to explore how branding, storytelling, e-commerce, and editorial design can come together into one cohesive digital experience.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Challenge</h3><p class="modal__section-text">Most coffee websites focus strictly on products but fail to communicate craftsmanship or create an emotional connection. We needed to design a brand that feels alive, where buying coffee feels like a ritual rather than a transaction.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Audience</h3><p class="modal__section-text">Coffee enthusiasts aged 24–45 — remote workers, creatives, founders — who appreciate craftsmanship, slow mornings, and intentional living.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Research</h3><p class="modal__section-text">Studied premium coffee brands like Blue Bottle, editorial magazines like Kinfolk, and boutique retail experiences. Observed how photography, typography, and whitespace influence perception of quality.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Strategy</h3><p class="modal__section-text">Use immersive imagery, restrained typography, and narrative-driven sections to make the user feel connected to the product before asking them to buy. The website feels like walking into a quiet café on a rainy morning.</p></div>
+      <div class="modal__section">
+        <h3 class="modal__section-title">Design System</h3>
+        <p class="modal__section-text">Warm, natural tones. Espresso browns, sand, cream, and muted olive greens. Typography pairs the elegant Cormorant Garamond with the clean General Sans to ensure readability while maintaining an editorial feel.</p>
+      </div>
+      <div class="modal__section"><h3 class="modal__section-title">Outcome</h3><p class="modal__section-text">Designed as a concept project demonstrating brand storytelling, premium e-commerce UX, and cohesive visual identity.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Reflection</h3><div class="modal__reflection"><p>Branding is storytelling compressed into symbols. The best brand identity doesn't describe what you do — it shows how you make people feel.</p></div></div>
+    </div>
+
+    <!-- MODAL: Travel -->
+    <div class="modal modal-content" id="modal-travel" style="display:none;">
+      <button class="modal__close" aria-label="Close modal">✕</button>
+      <div class="modal__hero-image">
+        <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(160deg,#0c1821,#162a3a,#1b4d5c);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+          <div style="text-align:center;"><span style="font-family:var(--font-serif);font-size:3.5rem;font-weight:400;color:#f7f5ee;font-style:italic;">Atlas Horizon</span><p style="font-size:0.85rem;color:#c29b62;letter-spacing:0.2em;text-transform:uppercase;margin-top:12px;">Luxury Expedition & Immersive Travel</p></div>
+        </div>
+      </div>
+      <span class="modal__category">UX Design · Frontend · Storytelling</span>
+      <h2 class="modal__title">Atlas Horizon</h2>
+      <div class="modal__meta">
+        <div class="modal__meta-item"><span class="modal__meta-key">Role</span><span class="modal__meta-value">UI/UX & Frontend</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Emotion</span><span class="modal__meta-value">Wonder · Curiosity</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Palette</span><span class="modal__meta-value">Deep Forest · Ivory · Gold</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Type</span><span class="modal__meta-value">Concept Project</span></div>
+      </div>
+      <div class="modal__section"><h3 class="modal__section-title">Overview</h3><p class="modal__section-text">Atlas Horizon is a fictional luxury expedition company designed to explore immersive storytelling, destination-first UX, and premium travel branding.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Challenge</h3><p class="modal__section-text">Most travel websites emphasize prices and booking mechanics instead of inspiring users emotionally. The challenge was to sell travel through emotion and storytelling, rather than discounts and flights.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Audience</h3><p class="modal__section-text">High-net-worth individuals, executives, and adventure enthusiasts aged 30–65 who want an unforgettable life experience, not just another vacation.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Research</h3><p class="modal__section-text">Analyzed luxury hospitality brands (Aman), travel magazines (National Geographic, Patagonia Stories), and premium resort websites. Focused on how they communicate exclusivity, trust, and aspiration.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Strategy</h3><p class="modal__section-text">Use photography, narrative copy, and restrained interactions to encourage users to imagine themselves on the journey before asking them to inquire. Slower scrolling, larger imagery, and a cinematic feel.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Outcome</h3><p class="modal__section-text">Designed as a concept project exploring premium travel storytelling, immersive UX, and high-end digital branding.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Reflection</h3><div class="modal__reflection"><p>The best UX doesn't feel like UX. When someone forgets they're using an interface and just feels the experience — that's when the design works.</p></div></div>
+    </div>
+
+    <!-- MODAL: Nova Studio -->
+    <div class="modal modal-content" id="modal-personal" style="display:none;">
+      <button class="modal__close" aria-label="Close modal">✕</button>
+      <div class="modal__hero-image">
+        <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(160deg,#050505,#111111,#1a1a1a);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+          <div style="text-align:center;"><span style="font-family:var(--font-sans);font-size:3.5rem;font-weight:700;letter-spacing:-0.05em;color:#fafafa;">NOVA.</span><p style="font-size:0.85rem;color:#2563eb;letter-spacing:0.15em;text-transform:uppercase;margin-top:12px;">Premium Creative Agency</p></div>
+        </div>
+      </div>
+      <span class="modal__category">Agency Website · UI/UX · Motion</span>
+      <h2 class="modal__title">Nova Studio</h2>
+      <div class="modal__meta">
+        <div class="modal__meta-item"><span class="modal__meta-key">Role</span><span class="modal__meta-value">Engineering & Branding</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Emotion</span><span class="modal__meta-value">Confident · Visionary</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Palette</span><span class="modal__meta-value">Black · White · Electric Blue</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Type</span><span class="modal__meta-value">Concept Project</span></div>
+      </div>
+      <div class="modal__section"><h3 class="modal__section-title">Overview</h3><p class="modal__section-text">Nova Studio is a fictional premium creative agency created to demonstrate advanced frontend engineering, motion design, branding, and agency-level UX. An Awwwards-style site focused on extreme minimalism and massive typography.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Challenge</h3><p class="modal__section-text">Most agency websites prioritize visual effects over communication, resulting in impressive first impressions but poor clarity. The challenge was building an identity that feels visionary and bold, while remaining incredibly clear and accessible.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Audience</h3><p class="modal__section-text">Luxury brands, tech startups, and enterprise companies evaluating digital partners. They look for precision, rhythm, and proof of craftsmanship.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Research</h3><p class="modal__section-text">Studied the philosophy behind Cuberto, Locomotive, Basic/Dept, and Apple. Focused on structure, pacing, and information hierarchy rather than just copying aesthetics. Evaluated how motion builds trust.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Strategy</h3><p class="modal__section-text">Create an editorial-first experience where typography, layout, and motion guide the user through the agency's philosophy, process, and selected work. Avoid decorative fluff — "The typography IS the design."</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Outcome</h3><p class="modal__section-text">Designed as a concept project exploring agency branding, advanced interaction design, and scalable frontend architecture.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Reflection</h3><div class="modal__reflection"><p>A great digital experience shouldn't just be viewed; it should be felt. Purposeful motion and precise typography elevate a website from a brochure into a digital product.</p></div></div>
+    </div>
+
+    <!-- MODAL: Project Echo (Digital Growth Strategy) -->
+    <div class="modal modal-content" id="modal-poetry" style="display:none;">
+      <button class="modal__close" aria-label="Close modal">✕</button>
+      <div class="modal__hero-image">
+        <div style="width:100%;aspect-ratio:16/9;background:linear-gradient(160deg,#0c0b09,#141210,#1a1714);display:flex;align-items:center;justify-content:center;border-radius:var(--radius-lg);">
+          <div style="text-align:center;"><span style="font-family:var(--font-serif);font-size:4rem;color:#c8b89a;font-style:italic;">शब्द (Echo)</span><p style="font-family:var(--font-serif);font-size:1.2rem;color:#7a6f5d;font-style:italic;margin-top:8px;">Growth Case Study</p><p style="font-size:0.75rem;color:#555;letter-spacing:0.2em;text-transform:uppercase;margin-top:16px;">1.1M+ Views in 30 Days · Zero Ad Spend</p></div>
+        </div>
+      </div>
+      <span class="modal__category">Digital Growth Strategy Case Study</span>
+      <h2 class="modal__title">Project Echo Case Study</h2>
+      <div class="modal__meta">
+        <div class="modal__meta-item"><span class="modal__meta-key">Role</span><span class="modal__meta-value">Growth & Strategy Lead</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Emotion</span><span class="modal__meta-value">Intimacy · Depth</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Platform</span><span class="modal__meta-value">Instagram (Organic)</span></div>
+        <div class="modal__meta-item"><span class="modal__meta-key">Reach</span><span class="modal__meta-value">1.1M+ Views / 30 Days</span></div>
+      </div>
+      <div class="modal__section"><h3 class="modal__section-title">Overview</h3><p class="modal__section-text">Project Echo documents the creative strategy and publishing systems built to scale a poetry-focused writing brand to over 1.1 million organic views in a 30-day period without paid advertising.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Challenge</h3><p class="modal__section-text">Saturated feeds make audience retention difficult. Simply posting writing does not work; it requires content design systems, hook layouts, pacing, and optimization framework metrics.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Audience</h3><p class="modal__section-text">18-35 year olds who value authentic creative writing. They bookmark content that mirrors their feelings and share messages that help them express themselves to their friends.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Research</h3><p class="modal__section-text">Analyzed top poetry and creative accounts. Discovered that simple black-text-on-warm-background designs dramatically outperform colorful graphics because they mirror paper print, evoking wabi-sabi wamth.</p></div>
+      <div class="modal__section">
+        <h3 class="modal__section-title">Strategy</h3>
+        <div class="modal__growth-metrics">
+          <div class="modal__growth-item"><h4 class="modal__growth-title">Content Pillars</h4><p class="modal__growth-text">Organized around Micro Poetry (hooks), Relatable Thoughts (shares), and Healing (saves) to drive distribution.</p></div>
+          <div class="modal__growth-item"><h4 class="modal__growth-title">Pacing Strategy</h4><p class="modal__growth-text">Used pattern interrupts, sentence length changes, and timed text lines to keep users reading past the 3-second mark.</p></div>
+          <div class="modal__growth-item"><h4 class="modal__growth-title">Creative Framework</h4><p class="modal__growth-text">Every asset follows: Hook → Setup Pause → Emotional Build → Peak Line → Reflection Loop.</p></div>
+          <div class="modal__growth-item"><h4 class="modal__growth-title">Systems Workflow</h4><p class="modal__growth-text">Structured production: Idea → Copywrite → visual layout → publish → review metrics → iterate.</p></div>
+        </div>
+      </div>
+      <div class="modal__section">
+        <h3 class="modal__section-title">Results</h3>
+        <div class="modal__outcomes">
+          <div class="modal__outcome"><span class="modal__outcome-number">1.1M+</span><span class="modal__outcome-label">Organic Views</span></div>
+          <div class="modal__outcome"><span class="modal__outcome-number">0</span><span class="modal__outcome-label">Paid Ads Spend</span></div>
+          <div class="modal__outcome"><span class="modal__outcome-number">100%</span><span class="modal__outcome-label">Original Content</span></div>
+        </div>
+      </div>
+      <div class="modal__section"><h3 class="modal__section-title">Why This Matters</h3><p class="modal__section-text">Proves I understand copywriting, content systems, growth marketing, and audience psychology by delivering real-world reach results rather than concept designs alone.</p></div>
+      <div class="modal__section"><h3 class="modal__section-title">Reflection</h3><div class="modal__reflection"><p>A growth system isn't luck; it's engineering emotional resonance. People share what represents their identity. If you design for identity, reach takes care of itself.</p></div></div>
+    </div>
+
+  </div>
+
+</body>
+</html>

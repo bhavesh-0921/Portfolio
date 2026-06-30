@@ -1,0 +1,156 @@
+/* ============================================
+   PROJECT ECHO — Base Styles & Typography
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--pe-sans);
+  background-color: var(--pe-bg);
+  color: var(--pe-text-primary);
+  line-height: 1.625;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--pe-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pe-text-faint);
+  border-radius: var(--pe-radius-full);
+}
+
+/* Focus States */
+:focus-visible {
+  outline: 1px solid var(--pe-text-primary);
+  outline-offset: 3px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--pe-duration) var(--pe-ease);
+}
+a:hover {
+  color: var(--pe-accent);
+}
+
+p {
+  max-width: 65ch;
+  color: var(--pe-text-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--pe-serif);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--pe-max-width);
+  margin: 0 auto;
+  padding: 0 var(--pe-6);
+}
+
+section {
+  padding: var(--pe-section) 0;
+}
+
+/* Section label */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--pe-3);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--pe-text-tertiary);
+  margin-bottom: var(--pe-4);
+  font-family: var(--pe-sans);
+}
+.label::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: var(--pe-text-tertiary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--pe-2);
+  padding: var(--pe-3) var(--pe-6);
+  font-size: var(--pe-text-sm);
+  font-weight: 500;
+  border-radius: var(--pe-radius-sm);
+  transition: all var(--pe-duration) var(--pe-ease);
+  font-family: var(--pe-sans);
+}
+
+.btn--primary {
+  background: var(--pe-text-primary);
+  color: var(--pe-bg);
+}
+.btn--primary:hover {
+  background: var(--pe-text-secondary);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--pe-text-primary);
+  border: 1px solid var(--pe-border-hover);
+}
+.btn--ghost:hover {
+  background: var(--pe-bg-alt);
+  border-color: var(--pe-text-primary);
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--pe-duration) var(--pe-ease), transform var(--pe-duration) var(--pe-ease);
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  background: var(--pe-text-primary);
+  color: var(--pe-bg);
+  padding: 10px 20px;
+  z-index: 1000;
+  border-radius: var(--pe-radius-sm);
+  transition: top var(--pe-duration) var(--pe-ease);
+}
+.skip-link:focus {
+  top: 20px;
+}

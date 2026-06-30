@@ -1,0 +1,73 @@
+/* ============================================
+   PULSEFLOW — Design Tokens
+   ============================================
+   Emotion: Control · Efficiency · Clarity
+   Palette: Near Black · White · Electric Blue
+   ============================================ */
+:root {
+  /* Colors: Backgrounds */
+  --pf-bg:            #09090B; /* Near Black */
+  --pf-bg-alt:        #121214;
+  --pf-surface:       #18181B;
+  --pf-surface-hover: #27272A;
+  --pf-surface-alt:   #09090B;
+
+  /* Colors: Light Theme Equivalents (if needed, but PulseFlow is Dark theme-focused like Linear/Raycast) */
+  --pf-border:        #27272A;
+  --pf-border-hover:  #3F3F46;
+  --pf-border-subtle: rgba(255, 255, 255, 0.05);
+
+  /* Colors: Text */
+  --pf-text-primary:   #FAFAFA;
+  --pf-text-secondary: #A1A1AA;
+  --pf-text-tertiary:  #71717A;
+  --pf-text-faint:     #52525B;
+
+  /* Colors: Accent — Electric Blue */
+  --pf-accent:         #2563EB;
+  --pf-accent-hover:   #3B82F6;
+  --pf-accent-subtle:  rgba(37, 99, 235, 0.15);
+
+  /* Status Colors */
+  --pf-success:        #22C55E;
+  --pf-success-bg:     rgba(34, 197, 94, 0.1);
+  --pf-warning:        #F59E0B;
+  --pf-warning-bg:     rgba(245, 158, 11, 0.1);
+  --pf-danger:         #EF4444;
+  --pf-danger-bg:      rgba(239, 68, 68, 0.1);
+  --pf-info:           #06B6D4;
+  --pf-info-bg:        rgba(6, 182, 212, 0.1);
+
+  /* Typography */
+  --pf-sans:           'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing System (8px Grid) */
+  --pf-1:  0.25rem;  /* 4px */
+  --pf-2:  0.5rem;   /* 8px */
+  --pf-3:  0.75rem;  /* 12px */
+  --pf-4:  1rem;     /* 16px */
+  --pf-5:  1.25rem;  /* 20px */
+  --pf-6:  1.5rem;   /* 24px */
+  --pf-8:  2rem;     /* 32px */
+  --pf-10: 2.5rem;   /* 40px */
+  --pf-12: 3rem;     /* 48px */
+  --pf-16: 4rem;     /* 64px */
+  --pf-20: 5rem;     /* 80px */
+  --pf-24: 6rem;     /* 96px */
+  --pf-32: 8rem;     /* 128px */
+
+  /* Radius (Volume III spec: 16px) */
+  --pf-radius-sm:  6px;
+  --pf-radius-md:  10px;
+  --pf-radius-lg:  16px;
+  --pf-radius-full: 9999px;
+
+  /* Dimensions */
+  --pf-sidebar-width: 240px;
+  --pf-header-height: 56px;
+  --pf-max-width:     1280px;
+
+  /* Transitions */
+  --pf-ease:          cubic-bezier(0.16, 1, 0.3, 1);
+  --pf-duration:      300ms;
+}

@@ -1,0 +1,37 @@
+:root {
+  /* Roast Theory Color Palette */
+  --color-bg-primary: #FDFBF7; /* Cream */
+  --color-bg-secondary: #F4EFE6; /* Sand */
+  --color-text-primary: #2C1E14; /* Espresso Brown */
+  --color-text-secondary: #3D2B1F; /* Dark Walnut */
+  --color-text-tertiary: #6E5C4F;
+  --color-accent: #6B705C; /* Olive Green */
+  --color-accent-light: rgba(107, 112, 92, 0.1);
+  --color-gold: #D4A574; /* Muted Gold */
+  
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Instrument Serif', serif;
+  --font-sans: 'Inter', 'General Sans', sans-serif;
+  
+  /* Spacing - Generous */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+  --space-5: 8rem;
+  --space-6: 12rem;
+  
+  /* Layout */
+  --max-width: 1400px;
+  --container-pad: 2rem;
+  
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Motion */
+  --transition-fast: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}

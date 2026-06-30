@@ -1,0 +1,83 @@
+/* ============================================
+   ATELIER AUREA — Design Tokens
+   ============================================
+   Emotion: Calm · Timeless · Sophisticated
+   Palette: Ivory · Charcoal · Muted Bronze
+   ============================================ */
+:root {
+  /* Colors: Backgrounds */
+  --au-bg:            #F8F5F0;
+  --au-bg-warm:       #F2EDE4;
+  --au-surface:       #FFFFFF;
+  --au-surface-alt:   #EDE8DF;
+
+  /* Colors: Text */
+  --au-text:          #2A2520;
+  --au-text-muted:    #6B6259;
+  --au-text-light:    #8A7E6D;
+  --au-text-faint:    #B5AA9A;
+
+  /* Colors: Accent — Muted Bronze */
+  --au-accent:        #B8956A;
+  --au-accent-hover:  #A07F56;
+  --au-accent-subtle: rgba(184, 149, 106, 0.08);
+
+  /* Colors: Utility */
+  --au-border:        rgba(42, 37, 32, 0.08);
+  --au-border-hover:  rgba(42, 37, 32, 0.15);
+  --au-overlay:       rgba(42, 37, 32, 0.6);
+  --au-selection:     rgba(184, 149, 106, 0.2);
+
+  /* Optional: Deep Olive */
+  --au-olive:         #4A5240;
+
+  /* Typography */
+  --au-serif:   'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --au-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Sizes */
+  --au-text-xs:   0.75rem;
+  --au-text-sm:   0.875rem;
+  --au-text-base: 1rem;
+  --au-text-lg:   1.125rem;
+  --au-text-xl:   1.25rem;
+  --au-text-2xl:  1.5rem;
+  --au-text-3xl:  1.875rem;
+  --au-text-4xl:  2.25rem;
+  --au-text-5xl:  3rem;
+  --au-text-6xl:  3.75rem;
+  --au-text-7xl:  4.5rem;
+  --au-text-8xl:  6rem;
+
+  /* Spacing (8px grid) */
+  --au-1:  0.25rem;
+  --au-2:  0.5rem;
+  --au-3:  0.75rem;
+  --au-4:  1rem;
+  --au-5:  1.25rem;
+  --au-6:  1.5rem;
+  --au-8:  2rem;
+  --au-10: 2.5rem;
+  --au-12: 3rem;
+  --au-16: 4rem;
+  --au-20: 5rem;
+  --au-24: 6rem;
+  --au-32: 8rem;
+  --au-40: 10rem;
+
+  /* Radius */
+  --au-radius-sm:  4px;
+  --au-radius-md:  8px;
+  --au-radius-lg:  12px;
+  --au-radius-xl:  16px;
+
+  /* Transitions — Slow, smooth, organic */
+  --au-ease:       cubic-bezier(0.16, 1, 0.3, 1);
+  --au-duration:   500ms;
+  --au-fast:       300ms;
+
+  /* Layout */
+  --au-max-width:  1200px;
+  --au-nav-height: 72px;
+  --au-section:    clamp(120px, 16vw, 200px);
+}

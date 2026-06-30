@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseFlow Workspace — Operations Management</title>
+  <meta name="description" content="PulseFlow team workspace dashboard. Centralized view of tasks, automations, team velocity, analytics, and billing.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%232563EB'/><path d='M30 40 L50 65 L70 40' stroke='white' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+  <link rel="stylesheet" href="/projects/pulseflow/css/tokens.css">
+  <link rel="stylesheet" href="/projects/pulseflow/css/base.css">
+  <link rel="stylesheet" href="/projects/pulseflow/css/sections.css">
+  <script src="/projects/pulseflow/js/main.js" defer></script>
+</head>
+<body class="pf-dashboard-body">
+
+  <!-- Accessibility Skip Link -->
+  <a href="#dashboard-main" class="skip-link">Skip to dashboard content</a>
+
+  <!-- ========== SIDEBAR NAVIGATION ========== -->
+  <aside class="pf-sidebar" role="complementary" aria-label="Workspace navigation">
+    <div class="pf-sidebar__header">
+      <div class="pf-sidebar__workspace">
+        <span class="pf-sidebar__workspace-logo">A</span>
+        Atelier Aurea Lab
+      </div>
+    </div>
+    
+    <nav class="pf-sidebar__nav" aria-label="Main sidebar navigation">
+      <a href="#" class="pf-sidebar__link active" data-tab-target="dashboard">
+        <svg class="pf-sidebar__link-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a href="#" class="pf-sidebar__link" data-tab-target="projects">
+        <svg class="pf-sidebar__link-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+        Projects
+      </a>
+      <a href="#" class="pf-sidebar__link" data-tab-target="analytics">
+        <svg class="pf-sidebar__link-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Analytics
+      </a>
+      <a href="#" class="pf-sidebar__link" data-tab-target="automation">
+        <svg class="pf-sidebar__link-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Flow Builder
+      </a>
+      <a href="#" class="pf-sidebar__link" data-tab-target="team">
+        <svg class="pf-sidebar__link-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Team
+      </a>
+      <a href="#" class="pf-sidebar__link" data-tab-target="calendar">
+        <svg class="pf-sidebar__link-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Calendar
+      </a>
+      <a href="#" class="pf-sidebar__link" data-tab-target="settings">
+        <svg class="pf-sidebar__link-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </a>
+      <a href="#" class="pf-sidebar__link" data-tab-target="billing">
+        <svg class="pf-sidebar__link-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Billing
+      </a>
+    </nav>
+    
+    <div class="pf-sidebar__footer">
+      <div class="pf-avatar">BA</div>
+      <div class="pf-avatar-info">
+        <span class="pf-avatar-name">Bhavesh Agrawal</span>
+        <span class="pf-avatar-role">Owner (Pro)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========== MAIN PAGE PANELS ========== -->
+  <main class="pf-main" id="dashboard-main" role="main">
+    
+    <!-- Top sub-header -->
+    <header class="pf-header">
+      <div class="pf-header__title">
+        <span id="pf-header-title">Dashboard</span>
+      </div>
+      
+      <div class="pf-header__actions">
+        <div class="pf-search" role="search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--pf-text-tertiary);"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input class="pf-search__input" type="search" placeholder="Search tasks..." aria-label="Search dashboard tasks">
+        </div>
+        <button class="btn btn--accent" style="min-height:34px; padding:0 var(--pf-4);" data-open-modal>
+          + New Task
+        </button>
+      </div>
+    </header>
+
+    <!-- Scrollable content window -->
+    <div class="pf-content">
+
+      <!-- ==================== VIEW 1: DASHBOARD ==================== -->
+      <div class="pf-view active" data-tab-view="dashboard">
+        
+        <!-- Metrics bar -->
+        <div class="pf-metrics-grid">
+          <div class="pf-metric-card card">
+            <span class="pf-metric-card__label">Active Workspace Sprint Runs</span>
+            <span class="pf-metric-card__value" data-metric-target="24">0</span>
+            <span class="pf-metric-card__change pf-metric-card__change--up">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="18 15 12 9 6 15"/></svg>
+              12% velocity spike
+            </span>
+          </div>
+
+          <div class="pf-metric-card card">
+            <span class="pf-metric-card__label">Automation Pipeline Volume</span>
+            <span class="pf-metric-card__value" data-metric-target="8240">0</span>
+            <span class="pf-metric-card__change pf-metric-card__change--up">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="18 15 12 9 6 15"/></svg>
+              +340 runs today
+            </span>
+          </div>
+
+          <div class="pf-metric-card card">
+            <span class="pf-metric-card__label">Approval Stream Backlog</span>
+            <span class="pf-metric-card__value" data-metric-target="3">0</span>
+            <span class="pf-metric-card__change pf-metric-card__change--down">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg>
+              Reduced by 4
+            </span>
+          </div>
+
+          <div class="pf-metric-card card">
+            <span class="pf-metric-card__label">API Uptime Status</span>
+            <span class="pf-metric-card__value">99.98%</span>
+            <span class="badge badge--success" style="align-self:flex-start; font-size:9px; margin-top:2px;">All Healthy</span>
+          </div>
+        </div>
+
+        <div class="pf-dashboard-grid-2x1">
+          <!-- Active Tasks table component -->
+          <div class="card" style="display:flex; flex-direction:column; gap:var(--pf-4);">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <h3 style="font-size:14px; font-weight:600;">Active Tasks Backlog</h3>
+              <a href="#" class="btn--text" data-tab-target="projects" style="font-size:12px;">See Kanban Board →</a>
+            </div>
+
+            <div class="pf-table-wrapper">
+              <table class="pf-table" aria-label="Task lists table">
+                <thead>
+                  <tr>
+                    <th>Task Identifier</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                    <th>Assigned Contributor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="color:var(--pf-text-primary); font-weight:500;">Review Lakeside Villa materials draft</td>
+                    <td><span class="badge badge--warning">In Progress</span></td>
+                    <td style="color:var(--pf-danger);">High</td>
+                    <td>Bhavesh Agrawal</td>
+                  </tr>
+                  <tr>
+                    <td style="color:var(--pf-text-primary); font-weight:500;">Configure auto-billing trigger hook</td>
+                    <td><span class="badge badge--success">Completed</span></td>
+                    <td>Medium</td>
+                    <td>Integration Agent</td>
+                  </tr>
+                  <tr>
+                    <td style="color:var(--pf-text-primary); font-weight:500;">Draft contract template for Penthouse project</td>
+                    <td><span class="badge badge--danger">Backlog</span></td>
+                    <td>Low</td>
+                    <td>Corporate Bot</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Alert feed component -->
+          <div class="card" style="display:flex; flex-direction:column; gap:var(--pf-4);">
+            <h3 style="font-size:14px; font-weight:600;">Operational Feed</h3>
+            <div style="display:flex; flex-direction:column; gap:var(--pf-3); font-size:12px;">
+              <div style="display:flex; gap:var(--pf-3); align-items:flex-start;">
+                <span class="badge badge--info" style="font-size:8px; padding:2px 6px;">Alert</span>
+                <div>
+                  <p style="color:var(--pf-text-primary); margin-bottom:2px;">Webhook Triggered</p>
+                  <span style="color:var(--pf-text-tertiary);">Slack channel #atelier-build notified successfully.</span>
+                </div>
+              </div>
+              <div style="display:flex; gap:var(--pf-3); align-items:flex-start;">
+                <span class="badge badge--warning" style="font-size:8px; padding:2px 6px;">Billing</span>
+                <div>
+                  <p style="color:var(--pf-text-primary); margin-bottom:2px;">Invoice auto-charged</p>
+                  <span style="color:var(--pf-text-tertiary);">$149.00 processed for Growth Plan renewal.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==================== VIEW 2: PROJECTS (Kanban Board) ==================== -->
+      <div class="pf-view" data-tab-view="projects">
+        <div class="pf-kanban">
+          <!-- Column 1: Backlog -->
+          <div class="pf-kanban-col">
+            <div class="pf-kanban-col__header">
+              <h3 class="pf-kanban-col__title">
+                <span style="width:8px; height:8px; background:var(--pf-text-tertiary); border-radius:50%;"></span>
+                Backlog
+              </h3>
+              <span class="pf-kanban-col__count">1</span>
+            </div>
+            
+            <div class="pf-kanban-col__list" data-kanban-status="backlog">
+              <div class="pf-task-card">
+                <h4 class="pf-task-card__title">Draft contract template for Penthouse project</h4>
+                <div class="pf-task-card__tags">
+                  <span class="badge badge--warning">Low Priority</span>
+                </div>
+                <div class="pf-task-card__footer">
+                  <span class="pf-task-card__assignee">
+                    <span class="pf-avatar" style="width:18px; height:18px; font-size:8px;">CB</span>
+                    CB
+                  </span>
+                  <span>1d ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: In Progress -->
+          <div class="pf-kanban-col">
+            <div class="pf-kanban-col__header">
+              <h3 class="pf-kanban-col__title">
+                <span style="width:8px; height:8px; background:var(--pf-warning); border-radius:50%;"></span>
+                In Progress
+              </h3>
+              <span class="pf-kanban-col__count">1</span>
+            </div>
+            
+            <div class="pf-kanban-col__list" data-kanban-status="progress">
+              <div class="pf-task-card">
+                <h4 class="pf-task-card__title">Review Lakeside Villa materials draft</h4>
+                <div class="pf-task-card__tags">
+                  <span class="badge badge--danger">High Priority</span>
+                </div>
+                <div class="pf-task-card__footer">
+                  <span class="pf-task-card__assignee">
+                    <span class="pf-avatar" style="width:18px; height:18px; font-size:8px;">BA</span>
+                    BA
+                  </span>
+                  <span>3h ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Done -->
+          <div class="pf-kanban-col">
+            <div class="pf-kanban-col__header">
+              <h3 class="pf-kanban-col__title">
+                <span style="width:8px; height:8px; background:var(--pf-success); border-radius:50%;"></span>
+                Completed
+              </h3>
+              <span class="pf-kanban-col__count">1</span>
+            </div>
+            
+            <div class="pf-kanban-col__list" data-kanban-status="done">
+              <div class="pf-task-card">
+                <h4 class="pf-task-card__title">Configure auto-billing trigger hook</h4>
+                <div class="pf-task-card__tags">
+                  <span class="badge badge--success">Completed</span>
+                </div>
+                <div class="pf-task-card__footer">
+                  <span class="pf-task-card__assignee">
+                    <span class="pf-avatar" style="width:18px; height:18px; font-size:8px;">IA</span>
+                    IA
+                  </span>
+                  <span>Yesterday</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== VIEW 3: ANALYTICS ==================== -->
+      <div class="pf-view" data-tab-view="analytics">
+        <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:var(--pf-4);">
+          <!-- Chart panel (Custom CSS charts for Stripe/Linear feel) -->
+          <div class="card" style="display:flex; flex-direction:column; gap:var(--pf-4);">
+            <h3 style="font-size:14px; font-weight:600;">Workspace Sprint Velocity (Tasks Completed)</h3>
+            <div class="pf-chart-graph"></div>
+            <p style="font-size:12px; color:var(--pf-text-secondary); margin-top:12px;">Weekly team completion velocity is trending upwards by 23% overall.</p>
+          </div>
+
+          <!-- Growth performance panel -->
+          <div class="card" style="display:flex; flex-direction:column; gap:var(--pf-4);">
+            <h3 style="font-size:14px; font-weight:600;">Volume Index metrics</h3>
+            <div style="display:flex; flex-direction:column; gap:var(--pf-4);">
+              <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--pf-border); padding-bottom:var(--pf-2);">
+                <span style="font-size:13px; color:var(--pf-text-secondary);">Completed Sprints</span>
+                <span style="font-weight:600;">43 Sprints</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--pf-border); padding-bottom:var(--pf-2);">
+                <span style="font-size:13px; color:var(--pf-text-secondary);">Avg. Resolution Time</span>
+                <span style="font-weight:600;">1.4 Days</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:13px; color:var(--pf-text-secondary);">SLA Success Ratio</span>
+                <span style="color:var(--pf-success); font-weight:600;">98.42%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== VIEW 4: AUTOMATION BUILDER ==================== -->
+      <div class="pf-view" data-tab-view="automation">
+        <div class="pf-automation-canvas">
+          <div style="position:absolute; top:20px; right:20px; display:flex; gap:var(--pf-2);">
+            <button class="btn btn--secondary" style="min-height:34px;" id="pf-add-node-btn">+ Add Step</button>
+            <button class="btn btn--accent" style="min-height:34px;" onclick="alert('Automation draft published successfully.')">Publish Flow</button>
+          </div>
+          
+          <div style="display:flex; flex-direction:column; align-items:center;" id="pf-node-flow-list">
+            <!-- Node 1: Trigger -->
+            <div class="pf-node pf-node--trigger">
+              <div class="pf-node__header">
+                <span class="badge badge--success" style="font-size:8px;">Trigger</span>
+              </div>
+              <h4 class="pf-node__title">On Task State Completed</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== VIEW 5: TEAM MANAGEMENT ==================== -->
+      <div class="pf-view" data-tab-view="team">
+        <div class="card" style="display:flex; flex-direction:column; gap:var(--pf-4);">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="font-size:14px; font-weight:600;">Team Members & Access Levels</h3>
+            <button class="btn btn--accent" style="min-height:32px; padding:0 var(--pf-3);" onclick="alert('Demo workspace invite limits reached.')">Invite Colleague</button>
+          </div>
+          
+          <div class="pf-table-wrapper">
+            <table class="pf-table" aria-label="Team member role assignment table">
+              <thead>
+                <tr>
+                  <th>Contributor</th>
+                  <th>Workspace Access</th>
+                  <th>Operational Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="display:flex; align-items:center; gap:var(--pf-3); font-weight:500; color:var(--pf-text-primary);">
+                    <span class="pf-avatar">BA</span>
+                    Bhavesh Agrawal
+                  </td>
+                  <td>Owner</td>
+                  <td><span class="badge badge--success">Active</span></td>
+                </tr>
+                <tr>
+                  <td style="display:flex; align-items:center; gap:var(--pf-3); font-weight:500; color:var(--pf-text-primary);">
+                    <span class="pf-avatar">IA</span>
+                    Integration Agent
+                  </td>
+                  <td>Administrator</td>
+                  <td><span class="badge badge--success">Active</span></td>
+                </tr>
+                <tr>
+                  <td style="display:flex; align-items:center; gap:var(--pf-3); font-weight:500; color:var(--pf-text-primary);">
+                    <span class="pf-avatar">CB</span>
+                    Corporate Bot
+                  </td>
+                  <td>Collaborator</td>
+                  <td><span class="badge badge--warning">Idle</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== VIEW 6: CALENDAR ==================== -->
+      <div class="pf-view" data-tab-view="calendar">
+        <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:var(--pf-4);">
+          <div class="card" style="display:flex; flex-direction:column; gap:var(--pf-4);">
+            <h3 style="font-size:14px; font-weight:600;">Workspace Sprint Calendar</h3>
+            <div style="display:grid; grid-template-columns:repeat(7, 1fr); gap:6px; font-size:11px; text-align:center;">
+              <span style="font-weight:600; color:var(--pf-text-tertiary);">Sun</span>
+              <span style="font-weight:600; color:var(--pf-text-tertiary);">Mon</span>
+              <span style="font-weight:600; color:var(--pf-text-tertiary);">Tue</span>
+              <span style="font-weight:600; color:var(--pf-text-tertiary);">Wed</span>
+              <span style="font-weight:600; color:var(--pf-text-tertiary);">Thu</span>
+              <span style="font-weight:600; color:var(--pf-text-tertiary);">Fri</span>
+              <span style="font-weight:600; color:var(--pf-text-tertiary);">Sat</span>
+
+              <!-- Dates layout -->
+              <span class="card" style="padding:var(--pf-2); background:var(--pf-surface-hover); border-color:var(--pf-border);">28</span>
+              <span class="card" style="padding:var(--pf-2); background:var(--pf-surface-hover); border-color:var(--pf-border);">29</span>
+              <span class="card" style="padding:var(--pf-2); background:var(--pf-surface-hover); border-color:var(--pf-border);">30</span>
+              <span class="card" style="padding:var(--pf-2); border-color:var(--pf-accent); background:var(--pf-accent-subtle);">1</span>
+              <span class="card" style="padding:var(--pf-2); border-color:var(--pf-border);">2</span>
+              <span class="card" style="padding:var(--pf-2); border-color:var(--pf-border);">3</span>
+              <span class="card" style="padding:var(--pf-2); border-color:var(--pf-border);">4</span>
+            </div>
+          </div>
+          
+          <div class="card" style="display:flex; flex-direction:column; gap:var(--pf-4);">
+            <h3 style="font-size:14px; font-weight:600;">Upcoming Milestones</h3>
+            <div style="display:flex; flex-direction:column; gap:var(--pf-3); font-size:12px;">
+              <div style="border-left:2px solid var(--pf-accent); padding-left:var(--pf-3);">
+                <p style="font-weight:500; color:var(--pf-text-primary);">Lake Como Client Presentation</p>
+                <span style="color:var(--pf-text-tertiary);">July 2 at 10:00 AM</span>
+              </div>
+              <div style="border-left:2px solid var(--pf-success); padding-left:var(--pf-3);">
+                <p style="font-weight:500; color:var(--pf-text-primary);">Atelier Website Soft Launch</p>
+                <span style="color:var(--pf-text-tertiary);">July 4 at 6:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== VIEW 7: SETTINGS ==================== -->
+      <div class="pf-view" data-tab-view="settings">
+        <div class="card">
+          <form class="pf-settings-form" onsubmit="event.preventDefault(); alert('Workspace settings draft saved.');">
+            <h3 style="font-size:16px; font-weight:600; margin-bottom:var(--pf-2);">Organization Profile</h3>
+            
+            <div class="pf-form-group">
+              <label class="pf-form-label" for="ws-name">Workspace Name</label>
+              <input class="pf-form-input" type="text" id="ws-name" value="Atelier Aurea Lab" required>
+            </div>
+            
+            <div class="pf-form-group">
+              <label class="pf-form-label" for="ws-owner">Operations Lead Email</label>
+              <input class="pf-form-input" type="email" id="ws-owner" value="agrawalbhavesh0903@gmail.com" required>
+            </div>
+
+            <div class="pf-form-group">
+              <label class="pf-form-label" for="ws-tz">Default Timezone</label>
+              <select class="pf-form-input" id="ws-tz" style="background-color: var(--pf-surface);">
+                <option value="GMT">Europe/Geneva (GMT+1)</option>
+                <option value="EST">Eastern Time (US/Canada)</option>
+                <option value="IST">India Standard Time (GMT+5:30)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn--accent" style="align-self:flex-start;">Save Changes</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ==================== VIEW 8: BILLING ==================== -->
+      <div class="pf-view" data-tab-view="billing">
+        <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:var(--pf-4);">
+          <!-- Payment status panel -->
+          <div class="card" style="display:flex; flex-direction:column; gap:var(--pf-5);">
+            <div>
+              <h3 style="font-size:14px; font-weight:600; margin-bottom:2px;">Current Plan</h3>
+              <p style="font-size:12px; color:var(--pf-text-secondary);">Your workspace is currently subscribed to the **Growth Tier**.</p>
+            </div>
+            
+            <div style="display:flex; align-items:center; gap:var(--pf-4);">
+              <span style="font-size:32px; font-weight:700;">$149.00</span>
+              <span class="badge badge--success">Paid Monthly</span>
+            </div>
+
+            <div style="display:flex; gap:var(--pf-2);">
+              <button class="btn btn--secondary" style="min-height:34px;" onclick="alert('Workspace plan modification unavailable in simulator.')">Modify Plan</button>
+              <button class="btn btn--ghost" style="font-size:12px; color:var(--pf-text-secondary);" onclick="alert('No invoice history found.')">View Receipts</button>
+            </div>
+          </div>
+
+          <!-- Billing card panel -->
+          <div class="card" style="display:flex; flex-direction:column; gap:var(--pf-4);">
+            <h3 style="font-size:14px; font-weight:600;">Payment Method</h3>
+            <div style="display:flex; align-items:center; gap:var(--pf-3); border:1px solid var(--pf-border); padding:var(--pf-3); border-radius:var(--pf-radius-md);">
+              <span style="font-weight:800; font-size:11px; background:rgba(255,255,255,0.08); padding:4px 8px; border-radius:4px;">VISA</span>
+              <div>
+                <p style="font-size:13px; color:var(--pf-text-primary);">Visa ending in 4242</p>
+                <span style="font-size:11px; color:var(--pf-text-tertiary);">Expires 09/2028</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========== MODAL BACKDROP (Task Creator) ========== -->
+  <div class="pf-modal-backdrop" id="pf-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="pf-modal">
+      <button class="pf-modal__close" aria-label="Close modal" data-close-modal>✕</button>
+      <h3 id="modal-title" style="font-size:16px; font-weight:600; margin-bottom:var(--pf-2);">Create Sprint Task</h3>
+      
+      <form id="pf-new-task-form" style="display:flex; flex-direction:column; gap:var(--pf-4);">
+        <div class="pf-form-group">
+          <label class="pf-form-label" for="pf-task-title-input">Task Title</label>
+          <input class="pf-form-input" type="text" id="pf-task-title-input" placeholder="e.g. Design invoice review pipeline" required>
+        </div>
+
+        <div class="pf-form-group">
+          <label class="pf-form-label" for="pf-task-status-input">Sprint Board Column</label>
+          <select class="pf-form-input" id="pf-task-status-input" style="background-color: var(--pf-surface);">
+            <option value="backlog">Backlog</option>
+            <option value="progress">In Progress</option>
+            <option value="done">Completed</option>
+          </select>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:var(--pf-2); margin-top:var(--pf-2);">
+          <button type="button" class="btn btn--secondary" style="min-height:36px;" data-close-modal>Cancel</button>
+          <button type="submit" class="btn btn--accent" style="min-height:36px;">Add to Kanban</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* ============================================
+   ATELIER AUREA — Base & Global Styles
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--au-sans);
+  font-weight: 400;
+  font-size: var(--au-text-base);
+  line-height: 1.6;
+  color: var(--au-text);
+  background-color: var(--au-bg);
+  overflow-x: hidden;
+}
+
+::selection { background: var(--au-selection); color: var(--au-text); }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--au-bg); }
+::-webkit-scrollbar-thumb { background: var(--au-text-faint); border-radius: 99px; }
+
+/* Accessibility */
+:focus-visible { outline: 2px solid var(--au-accent); outline-offset: 3px; }
+:focus:not(:focus-visible) { outline: none; }
+
+.skip-link {
+  position: absolute; top: -100%; left: var(--au-4);
+  padding: var(--au-3) var(--au-6); background: var(--au-accent); color: #fff;
+  font-size: var(--au-text-sm); border-radius: var(--au-radius-md); z-index: 9999;
+}
+.skip-link:focus { top: var(--au-4); }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 400; line-height: 1.15; }
+a { color: inherit; text-decoration: none; transition: color var(--au-fast) var(--au-ease); }
+ul, ol { list-style: none; }
+img { display: block; max-width: 100%; height: auto; }
+button { border: none; background: none; cursor: pointer; font-family: inherit; color: inherit; }
+p { max-width: 65ch; }
+
+.container {
+  width: 100%; max-width: var(--au-max-width);
+  margin: 0 auto; padding: 0 var(--au-6);
+}
+
+section { padding: var(--au-section) 0; }
+
+/* ---- Reveal Animations ---- */
+.reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity var(--au-duration) var(--au-ease), transform var(--au-duration) var(--au-ease);
+}
+.reveal.revealed { opacity: 1; transform: translateY(0); }
+
+.stagger > * {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity var(--au-fast) var(--au-ease), transform var(--au-fast) var(--au-ease);
+}
+.stagger.revealed > *:nth-child(1) { transition-delay: 0ms; }
+.stagger.revealed > *:nth-child(2) { transition-delay: 100ms; }
+.stagger.revealed > *:nth-child(3) { transition-delay: 200ms; }
+.stagger.revealed > *:nth-child(4) { transition-delay: 300ms; }
+.stagger.revealed > *:nth-child(5) { transition-delay: 400ms; }
+.stagger.revealed > *:nth-child(6) { transition-delay: 500ms; }
+.stagger.revealed > * { opacity: 1; transform: translateY(0); }
+
+/* ---- Section Label ---- */
+.label {
+  display: inline-flex; align-items: center; gap: var(--au-3);
+  font-size: var(--au-text-xs); font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--au-text-light);
+}
+.label::before { content: ''; width: 24px; height: 1px; background: var(--au-accent); }
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--au-2);
+  padding: var(--au-4) var(--au-8); font-size: var(--au-text-sm); font-weight: 500;
+  letter-spacing: 0.05em; border-radius: 0; transition: all var(--au-fast) var(--au-ease);
+}
+.btn--primary {
+  background: var(--au-text); color: var(--au-bg); border: 1px solid var(--au-text);
+}
+.btn--primary:hover { background: var(--au-accent); border-color: var(--au-accent); color: #fff; }
+.btn--ghost {
+  background: transparent; color: var(--au-text); border: 1px solid var(--au-border-hover);
+}
+.btn--ghost:hover { border-color: var(--au-text); }
+.btn--text {
+  padding: 0; font-size: var(--au-text-sm); color: var(--au-text-muted);
+  letter-spacing: 0.05em; border: none;
+}
+.btn--text:hover { color: var(--au-accent); }
+.btn--text .arrow { display: inline-block; transition: transform var(--au-fast) var(--au-ease); }
+.btn--text:hover .arrow { transform: translateX(4px); }
