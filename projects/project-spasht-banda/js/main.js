@@ -1,5 +1,5 @@
 /* ============================================
-   PROJECT ECHO — Case Study Interactivity
+   PROJECT SPASHT_BANDA — Case Study Interactivity
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
