@@ -16,7 +16,9 @@ export function initModals() {
   });
 
   // Close on X button
-  overlay.querySelector('.modal__close')?.addEventListener('click', closeModal);
+  overlay.querySelectorAll('.modal__close').forEach(btn => {
+    btn.addEventListener('click', closeModal);
+  });
 
   // Close on backdrop click
   overlay.addEventListener('click', (e) => {
@@ -27,6 +29,16 @@ export function initModals() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
   });
+
+  // Deep linking: open modal if URL hash matches a project ID
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    const targetModal = document.getElementById(`modal-${hash}`);
+    if (targetModal) {
+      // Small delay ensures styles and layout are ready
+      setTimeout(() => openModal(hash), 100);
+    }
+  }
 }
 
 function openModal(projectId) {
@@ -41,6 +53,9 @@ function openModal(projectId) {
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 
+  // Update URL for sharing
+  window.history.replaceState(null, null, '#' + projectId);
+
   // Scroll modal to top
   overlay.scrollTop = 0;
 }
@@ -51,4 +66,7 @@ function closeModal() {
 
   overlay.classList.remove('open');
   document.body.style.overflow = '';
+  
+  // Remove hash from URL when closing
+  window.history.replaceState(null, null, window.location.pathname + window.location.search);
 }
